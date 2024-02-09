@@ -61,7 +61,7 @@ function Login() {
                 required: true,
                 validate: {
                   matchpatern: (value) =>
-                    /regex/.test(value) ||
+                    /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) ||
                     "Email address must be a valid address",
                 },
               })}
@@ -74,7 +74,9 @@ function Login() {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full" >Sign in</Button>
+            <Button type="submit" className="w-full">
+              Sign in
+            </Button>
           </div>
         </form>
       </div>
