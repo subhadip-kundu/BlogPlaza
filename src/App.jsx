@@ -3,6 +3,8 @@ import { useDispatch } from "react-redux";
 import authService from "./Appwrite/userAuth.js";
 import "./App.css";
 import { login, logout } from "./Store/authSlice.js";
+import { Outlet } from "react-router-dom";
+import { Footer, Header } from "./components/index.js";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -25,7 +27,15 @@ function App() {
 
   return !loading ? (
     <>
-      <div>Going with the BlogPlaza</div>
+      <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header />
+        <main>
+        TODO:  <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </div>
     </>
   ) : null;
 }

@@ -3,8 +3,9 @@ import authService from "../Appwrite/userAuth";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../Store/authSlice";
 import { Button, Input, Logo } from "./index";
-import { useDispatch } from "react-redux";
-import useForm from "react-hook-form";
+import { useDispatch } from 'react-redux';
+import { useForm } from 'react-hook-form';
+
 
 function Signup() {
   const navigate = useNavigate();
