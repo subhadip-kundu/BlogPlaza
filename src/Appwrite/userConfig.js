@@ -5,6 +5,7 @@ export class Service {
   client = new Client();
   databases;
   bucket;
+
   constructor() {
     this.client
       .setEndpoint(config.appwriteUrl)
@@ -117,6 +118,7 @@ export class Service {
     return await this.bucket.getFilePreview(config.appwriteBucketId, fileId);
   }
 }
+// console.log("URL: " + config.appwriteProjectId);
 
 const service = new Service();
 export default service;
